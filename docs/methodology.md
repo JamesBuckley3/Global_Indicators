@@ -36,7 +36,7 @@
 
 ### Several basic visualisations were created to explore development patterns:
     In Excel I made:
-
+    
         Treemaps for:
             Population by Region (2020)
             Population by Income Group (2020)
@@ -50,6 +50,10 @@
     
     I then created a general Power BI dashboard that highlights certain important indicators across the 25 countries that averaged the highest populations in the dataset.
 
+    After that I created three additional Power BI dashboards relating to Health, Environment and Economy indicators. I created a third data table for a 100% stacked area chart that shows CO2 emissions over time for the top 5 emitting countries (2000-2020).
+
+All icons used in the card visuals were downloaded from the copyright free image website [pixabay](https://pixabay.com).
+
 ## 5. 🛠 Tools Used
 
     Microsoft Excel: Core tool for transformation, analysis, and visualization.
@@ -62,13 +66,11 @@
 
 ## 6. 📌 Next Steps (Planned)
 
-    Create one or two more dashboards in Power BI that explore specific sectors to better understand the data.
-
-    Analyse which indicators best explain Life Expectancy and use them for prediction.
+    Analyse which indicators best explain Life Expectancy in R and use them for prediction.
 
 ## 7. ⚠️ Limitations
 
-    The dataset may contain missing or interpolated values in some indicators.
+    The dataset contains missing or interpolated values in some indicators.
 
     No external validation was performed on the accuracy of reported values.
 
