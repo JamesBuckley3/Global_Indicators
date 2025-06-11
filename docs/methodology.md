@@ -1,4 +1,4 @@
-# 📊 Methodology: Exploring Global Development Indicators (2000–2020)
+# 📊 Methodology: Global Indicators Visualisation and Analysis
 
 ## 1. 📥 Data Collection
 
@@ -54,19 +54,46 @@
 
 All icons used in the card visuals were downloaded from the copyright free image website [pixabay](https://pixabay.com).
 
-## 5. 🛠 Tools Used
+## 5. 📈 Statistical Analysis
+
+### Data sorting and Visualisation
+
+    Data was loaded in and examined using some visualisations that are not easily achievable with other tools.
+
+    Data was separated into training and test sets.
+
+    Non-numerical data was discarded and rows with missing values omitted due to some models not being compatible with NAs.
+
+### Training the models
+
+    Both multiple linear regression and linear regression were performed on each predictor. Polynomial regression was tried on the best performing predictors and lag variables were created for Child Mortality.
+
+    Also based on the simple linear and multiple linear regression a small subset was trained and best subset selection was used to compare and identify the best model for each number of predictors up to 10 at a time.
+
+    GLM (Generalised Linear Model) techniques were tried on the child mortality predictor with cross-validation used to determine the best number of cuts.
+
+    Decision tree, bagged trees and random forest trees were also used.
+
+### Testing our models
+
+    First I performed a t test to determine if the training and test set were similar enough. Then I tested a selection of three models on the data:
+
+    - Linear Regression using Child Mortality
+    - Natural Spline also using Child Mortality
+    - Bagged Trees
+
+
+## 6. 🛠 Tools Used
 
     Microsoft Excel: Core tool for transformation, analysis, and visualization.
     
     Power Query: For data loading, cleaning, and transformation.
 
-    Power BI: Snazzier visualisations that allow you to isolate more populous countries and understand their key development indicators.
+    Power BI: Snazzier visualisations that allow you to isolate the more populous countries and understand their key development indicators.
+
+    R / Google Colab: Statistical analysis using the Jupyter Notebook based Google Colab Notebooks site.
     
     Kaggle: Data source.
-
-## 6. 📌 Next Steps (Planned)
-
-    Analyse which indicators best explain Life Expectancy in R and use them for prediction.
 
 ## 7. ⚠️ Limitations
 
@@ -74,4 +101,10 @@ All icons used in the card visuals were downloaded from the copyright free image
 
     No external validation was performed on the accuracy of reported values.
 
-    Indicators are analyzed in isolation (so far) unless explicitly correlated in visualisations.
+    Strong likelihood of multicollinearity between Life Expectancy and its strongest predictors.
+
+## 8. 📌 Potential Next Steps
+
+    Contact the data publisher to learn specifics about the data.
+    
+    Perform PCA (Principal Component Analysis), Ridge Regression or the Lasso on a subset of the data that may include predictors that are suspected of multicollinearity.
